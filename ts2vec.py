@@ -101,9 +101,9 @@ class TS2Vec:
             
             interrupted = False
             for batch in train_loader:
-                if n_iters is not None and self.n_iters >= n_iters:
-                    interrupted = True
-                    break
+                # if n_iters is not None and self.n_iters >= n_iters:
+                #     interrupted = True
+                #     break
                 
                 x = batch[0]
                 if self.max_train_length is not None and x.size(1) > self.max_train_length:
